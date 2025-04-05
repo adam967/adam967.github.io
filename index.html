@@ -1,4 +1,190 @@
-<html>
-<head></head>
-<body><h1>TEST</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://nxpuhjve.eup.stape.net/hnxpuhjve.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','8=aWQ9R1RNLU5SUEJYNUpX&page=1');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo E-commerce Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+(function(window, document, dataLayerName, id) {
+window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);var qPString=qP.length>0?("?"+qP.join("&")):"";
+tags.async=!0,tags.src="https://adam967.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+!function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+})(window, document, 'dataLayer', '997a9a21-13f0-47b0-addd-e96a22db22b3');
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://nxpuhjve.eup.stape.net/ns.html?id=GTM-NRPBX5JW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <h1>Demo E-commerce Store</h1>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <!-- Product 1: Watch -->
+      <div class="product">
+        <a href="watch.html" class="product-link" data-item-id="1" data-item-name="Watch" data-item-category="Accessories" data-item-price="199.99">
+          <img src="images/watch.webp" alt="Watch">
+        </a>
+        <div class="product-details">
+          <h2><a href="watch.html" class="product-link" data-item-id="1" data-item-name="Watch" data-item-category="Accessories" data-item-price="199.99">Watch</a></h2>
+          <p class="price"><a href="watch.html" class="product-link" data-item-id="1" data-item-name="Watch" data-item-category="Accessories" data-item-price="199.99">$199.99</a></p>
+        </div>
+      </div>
+
+      <!-- Product 2: Tablet -->
+      <div class="product">
+        <a href="tablet.html" class="product-link" data-item-id="2" data-item-name="Tablet" data-item-category="Electronics" data-item-price="299.99">
+          <img src="images/tablet.webp" alt="Tablet">
+        </a>
+        <div class="product-details">
+          <h2><a href="tablet.html" class="product-link" data-item-id="2" data-item-name="Tablet" data-item-category="Electronics" data-item-price="299.99">Tablet</a></h2>
+          <p class="price"><a href="tablet.html" class="product-link" data-item-id="2" data-item-name="Tablet" data-item-category="Electronics" data-item-price="299.99">$299.99</a></p>
+        </div>
+      </div>
+
+      <!-- Product 3: Laptop -->
+      <div class="product">
+        <a href="laptop.html" class="product-link" data-item-id="3" data-item-name="Laptop" data-item-category="Electronics" data-item-price="2499.99">
+          <img src="images/laptop.webp" alt="Laptop">
+        </a>
+        <div class="product-details">
+          <h2><a href="laptop.html" class="product-link" data-item-id="3" data-item-name="Laptop" data-item-category="Electronics" data-item-price="2499.99">Laptop</a></h2>
+          <p class="price"><a href="laptop.html" class="product-link" data-item-id="3" data-item-name="Laptop" data-item-category="Electronics" data-item-price="2499.99">$2499.99</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="form-section">
+      <h2>Contact Form</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" id="submit-button" disabled>Send</button>
+      </form>
+    </section>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const submitButton = document.getElementById('submit-button');
+      const emailField = document.getElementById('email');
+
+      form.addEventListener('input', function () {
+        const name = document.getElementById('name').value;
+        const email = emailField.value;
+        const message = document.getElementById('message').value;
+
+        // Wyrażenie regularne do walidacji e-maila
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Sprawdź, czy wszystkie pola są wypełnione i e-mail jest poprawny
+        if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '' && emailRegex.test(email)) {
+          submitButton.disabled = false;  // Aktywuj przycisk
+        } else {
+          submitButton.disabled = true;  // Dezaktywuj przycisk
+        }
+      });
+    });
+
+    </script>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:contact@demo.com">contact@demo.com</a></p>
+      <p>Phone: <a href="tel:+48123456789">+48 123 456 789</a></p>
+      <button>Test Button</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Demo E-commerce</p>
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.addEventListener('DOMContentLoaded',function () {
+      dataLayer.push({ ecommerce: null });
+      dataLayer.push({
+        'event': 'view_item_list',
+        ecommerce: {
+          'items': [
+            {
+              'item_id': '1',
+              'item_name': 'Watch',
+              'item_brand': "My Brand",
+              'item_category': 'accessories',
+              'item_list_name': 'home_product_list',
+              'price': 199.99
+            },
+            {
+              'item_id': '2',
+              'item_name': 'Tablet',
+              'item_brand': "My Brand",
+              'item_category': 'electronics',
+              'item_list_name': "home_product_list",
+              'price': 299.99
+            },
+            {
+              'item_id': '3',
+              'item_name': 'Laptop',
+              'item_brand': "My Brand",
+              'item_category': 'electronics',
+              'item_list_name': "home_product_list",
+              'price': 2499.99
+            }
+          ],
+          'item_list_name': 'home_product_list'
+        }
+      });
+    });
+  </script>
+
+<script>
+  window.dataLayer = window.dataLayer || []; // Inicjalizacja na początku skryptu
+
+  document.querySelectorAll('.product-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      const data = event.currentTarget.dataset; // Pobierz dane z `data-*`
+
+      dataLayer.push({ ecommerce: null });
+      dataLayer.push({
+        event: 'select_item',
+        ecommerce: {
+          items: [
+            {
+              item_id: data.itemId,
+              item_name: data.itemName,
+              item_brand: 'My Brand',
+              item_category: data.itemCategory,
+              item_list_name: 'home_product_list',  // Zostaje tutaj
+              price: parseFloat(data.itemPrice)
+            }
+          ],
+          item_list_name: 'home_product_list'  // Zostaje tutaj
+        }
+      });
+    });
+  });
+</script>
+
+</body>
 </html>
